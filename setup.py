@@ -9,7 +9,6 @@ setup(
     # find_package() without any arguments will serach the same
     # directory as the setup.py for modules and packages.
     packages=find_packages(),
-    include_package_data=True,
     entry_points={
         'console_scripts': [
             'chiafan-plot-sim=chiafan_simulator.app:main',
