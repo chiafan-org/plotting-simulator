@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+import os
 
 setup(
     name='chiafan-plotting-simulator',
@@ -9,6 +10,12 @@ setup(
     # find_package() without any arguments will serach the same
     # directory as the setup.py for modules and packages.
     packages=find_packages(),
+    package_data = {
+        '': ['*.txt'],
+    },
+    data_files = [
+        ('templates', ['chiafan_simulator/templates/sample_log.txt']),
+    ],
     entry_points={
         'console_scripts': [
             'chiafan-plot-sim=chiafan_simulator.app:main',
